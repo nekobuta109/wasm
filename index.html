@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <canvas id="canvas" width="1920" height="1080"></canvas>
+    <script>
+        setTimeout( ()=>{
+            console.log(wasmExports.add(5,10));
+            const size = 2000;
+            const len = 10;
+            const x0 = 500;
+            const y0 = 500;
+            const heap_base = wasmExports.__heap_base;
+            wasmExports.dragonCurve(__heap_base, size, len, x0, y0);
+        },3000);
+    </script>
+</body>
+</html>
