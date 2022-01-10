@@ -12,7 +12,7 @@ unsigned char* get_heap(void)
 {
     _heap = malloc(1024);
     *(unsigned char*)_heap = 0xef;  //
-//    printf("address= 0x%x\n", (unsigned int)_heap);
+    printf("address= 0x%x\n", (unsigned int)_heap);
     return (unsigned char*)_heap;
 }
 EMSCRIPTEN_KEEPALIVE
